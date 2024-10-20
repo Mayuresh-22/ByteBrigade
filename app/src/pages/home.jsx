@@ -28,6 +28,7 @@ export default function HomeLayout() {
           <SidebarMenuItem icon={<Inbox className="h-5 w-5 mr-2" />} link="/messages">
             Messages
           </SidebarMenuItem>
+          <NewPostButton className={"w-full"}/>
         </SidebarMenuList>
       </Sidebar>
 
@@ -39,7 +40,6 @@ export default function HomeLayout() {
           <div className="flex items-center space-x-4">
             <NotificationButton />
             <LoginButton />
-            <NewPostButton />
             <UserProfileButton user={{ name: 'John Doe' }} />
           </div>
         </Header>

@@ -15,7 +15,7 @@ export const Sidebar = ({ children }) => {
 
 export const SidebarMenuList = ({ children }) => {
   return <nav className="mt-8">
-    <ul className="space-y-3">
+    <ul className="space-y-3 pr-5">
       {children}
     </ul>
   </nav>

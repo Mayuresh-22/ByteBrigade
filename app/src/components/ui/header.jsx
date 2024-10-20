@@ -44,9 +44,9 @@ export const HeaderActions = ({ children }) => {
   );
 }
 
-export const NewPostButton = () => {
+export const NewPostButton = ({ className }) => {
   return (
-    <Button className="bg-blue-500 text-white" size="md">
+    <Button className={`bg-blue-500 border-2 border-blue-600 rounded-full px-5 text-white hover:bg-blue-600 ${className}`} size="md">
       New Post
     </Button>
   );

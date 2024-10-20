@@ -2,7 +2,7 @@ import React from "react";
 import { Avatar, AvatarImage } from '../avatar'
 import { Button } from '../button'
 import { Card, CardContent, CardHeader, CardFooter } from '../card/card'
-import { Input } from '../input'
+import { Input, TextArea } from '../input'
 import { Image, Link } from 'lucide-react'
 
 export const AddPost = () => {
@@ -12,23 +12,10 @@ export const AddPost = () => {
         <Avatar>
           <AvatarImage src="/placeholder.svg?height=40&width=40" alt="Your avatar" />
         </Avatar>
-        <Input placeholder="Ask a question to the community?" className="flex-grow" />
+        <TextArea placeholder="Ask a question to the community?" className="flex-grow border-b-2" />
       </CardHeader>
-      <CardContent className="pb-2">
-        <div className="flex space-x-2">
-          <Button variant="outline" size="sm">
-            <Image className="h-4 w-4 mr-2" />
-            Image
-          </Button>
-          <Button variant="outline" size="sm">
-            <Link className="h-4 w-4 mr-2" />
-            Link
-          </Button>
-        </div>
-      </CardContent>
-      <CardFooter className="flex justify-between pt-0">
-        <Button variant="outline">Write Article</Button>
-        <Button className="bg-blue-600 text-white hover:bg-blue-700" size="md">Post</Button>
+      <CardFooter className="flex justify-end pt-0">
+        <Button className="bg-blue-500 border-2 border-blue-600 text-white rounded-full px-5 hover:bg-blue-600" size="md">Post</Button>
       </CardFooter>
     </Card>
   );

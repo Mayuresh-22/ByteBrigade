@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from '../avatar'
 import { Button } from "../button";
 import { Card, CardContent, CardHeader, CardFooter } from '../card/card'
 import { MessageSquare, MoreHorizontal, Repeat2, ThumbsUp } from 'lucide-react'
-import { 
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
- } from '../dropdown/dropdown'
+} from '../dropdown/dropdown'
 
 export const Post = ({ post }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <Card key={post} className="mb-6">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -25,14 +31,14 @@ export const Post = ({ post }) => {
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
+            <Button variant="ghost" className="h-8 w-8 p-0" onClick={toggleDropdown}>
               <MoreHorizontal className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
+          {isDropdownOpen && <DropdownMenuContent align="end">
             <DropdownMenuItem>Edit</DropdownMenuItem>
             <DropdownMenuItem>Delete</DropdownMenuItem>
-          </DropdownMenuContent>
+          </DropdownMenuContent>}
         </DropdownMenu>
       </CardHeader>
       <CardContent>
