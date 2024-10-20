@@ -5,7 +5,7 @@ import { BellDot, LogIn } from "lucide-react";
 
 export const Header = ({ children }) => {
   return (
-    <header className="bg-white border-b border-gray-200 h-16 flex items-center justify-between px-20">
+    <header className="bg-white border-b border-gray-200 h-16 flex items-center justify-between px-10">
       {children}
     </header>
   );
