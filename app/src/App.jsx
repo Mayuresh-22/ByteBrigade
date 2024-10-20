@@ -35,7 +35,7 @@ function App() {
             <SidebarMenuItem icon={<BookOpen className="h-5 w-5 mr-2" />} link="/blogs">
               Blogs
             </SidebarMenuItem>
-            <SidebarMenuItem icon={<Inbox className="h-5 w-5 mr-2" />} link="/messages">
+            <SidebarMenuItem icon={<Inbox className="h-5 w-5 mr-2" />} link="/message">
               Messages
             </SidebarMenuItem>
             <AddNewButton className={"w-full"} />

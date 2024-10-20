@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../components/ui/button';
 
 const MessageLayout = () => {
   return (
@@ -26,9 +27,10 @@ const MessageLayout = () => {
           Use personalized short topics to quickly start conversations on common themes.
         </p>
 
-        <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full mt-6">
+        <Button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full mt-6" 
+        onClick={() => alert('We are yet to add this feature.')}>
           Start New Discussion
-        </button>
+        </Button>
       </div>
     </div>
   );
