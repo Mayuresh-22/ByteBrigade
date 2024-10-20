@@ -27,10 +27,12 @@ Delete: To delete deactivated alumni's profile or account.
 Upcoming and Past Alumni Events [all events]
 Alert: Notifications from PCCOE to alumni related to policy changes and institute news.
 
-5. Date and User Interaction Section
+Prototype Link: https://www.figma.com/proto/KuTFezFQKPapHTcWSazULT/Hactopia?node-id=16-2&t=rj9FQze4vJwviRwd-1
+
+6. Date and User Interaction Section
 A customizable widget appears on the right displaying both user-gernated content and date. The dashboard, in turn, showcases:
 Messages from alumni admin.
 Alumni Network Replies (e.g. Event Results, Attendances or Feedback.)
 
-6. Visual Appeal:
+7. Visual Appeal:
 The user interface is a mix of neutral colors and bright tones, to create an interactive feel. Icons represent key features for instant recognition and visual data displays (charts) that offer users the ability to see, at a glance real-time statistics on alumni engagement and event performance.
