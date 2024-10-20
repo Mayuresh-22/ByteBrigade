@@ -1,7 +1,7 @@
 import React from "react";
 import { SearchBar } from "./search-bar";
 import { Button } from "./button";
-import { BellDot, LogIn } from "lucide-react";
+import { BellDot, LogIn, Plus } from "lucide-react";
 
 export const Header = ({ children }) => {
   return (
@@ -44,10 +44,11 @@ export const HeaderActions = ({ children }) => {
   );
 }
 
-export const NewPostButton = ({ className }) => {
+export const AddNewButton = ({ className, ...props }) => {
   return (
-    <Button className={`bg-blue-500 border-2 border-blue-600 rounded-full px-5 text-white hover:bg-blue-600 ${className}`} size="md">
-      New Post
+    <Button className={`bg-blue-500 border-2 border-blue-600 rounded-full px-5 text-white hover:bg-blue-600 ${className}`} {...props} size="md">
+      <Plus className="h-5 w-5 mr-2" />
+      Add New
     </Button>
   );
 }

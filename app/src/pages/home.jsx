@@ -4,7 +4,7 @@ import { Bell, BookOpen, BriefcaseIcon, Home, Inbox, LogIn, Search, Users } from
 import { Button } from '../components/ui/button'
 import { SearchBar } from '../components/ui/search-bar'
 import { Sidebar, SidebarMenuItem, SidebarMenuList } from '../components/ui/sidebar'
-import { Header, LoginButton, NewPostButton, NotificationButton, UserProfileButton } from '../components/ui/header'
+import { Header, LoginButton, AddNewButton, NotificationButton, UserProfileButton } from '../components/ui/header'
 import Feed from '../components/ui/feed/feed'
 
 export default function HomeLayout() {
@@ -28,7 +28,7 @@ export default function HomeLayout() {
           <SidebarMenuItem icon={<Inbox className="h-5 w-5 mr-2" />} link="/messages">
             Messages
           </SidebarMenuItem>
-          <NewPostButton className={"w-full"}/>
+          <AddNewButton className={"w-full"}/>
         </SidebarMenuList>
       </Sidebar>
 
@@ -45,7 +45,7 @@ export default function HomeLayout() {
         </Header>
 
         {/* Page content */}
-        <main className="flex-1 overflow-y-scroll bg-gray-100 p-4 space-y-10">
+        <main className="flex-1 overflow-y-scroll bg-gray-50 p-4 space-y-10">
           <div>
             {/* Your page content will go here */}
             <h2 className="text-2xl font-semibold mb-4 text-gray-900">Welcome to AlumniConnect</h2>
