@@ -31,7 +31,7 @@ export const TextArea = ({ label, placeholder, value, onChange, className, input
         onChange={onChange}
         maxLength={500}
         security="true"
-        className={`rounded px-3 py-2 mt-1 ${inputClassName} focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none h-32`}
+        className={`rounded px-3 py-2 mt-1 ${inputClassName} focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none h-20`}
       />
     </div>
   );

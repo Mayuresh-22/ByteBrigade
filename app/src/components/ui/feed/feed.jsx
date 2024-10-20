@@ -23,7 +23,7 @@ export default function Feed() {
             <h3 className="text-lg font-semibold">Active Discussions</h3>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
+            <div className="space-y-5">
               {[1, 2].map((discussion) => (
                 <div key={discussion} className="flex items-start space-x-4">
                   <Avatar>

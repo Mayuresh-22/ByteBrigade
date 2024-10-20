@@ -1,5 +1,6 @@
 import { BookOpen, BriefcaseIcon, Home, Inbox, Users } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Sidebar = ({ children }) => {
   return (
@@ -23,9 +24,9 @@ export const SidebarMenuList = ({ children }) => {
 
 export const SidebarMenuItem = ({ icon, children, link }) => {
   return (
-    <a href={link} className="flex items-center px-4 py-2 text-lg text-gray-900 hover:bg-gray-100">
+    <Link to={link} className="flex items-center px-4 py-2 text-lg text-gray-900 hover:bg-gray-100">
       {icon}
       {children}
-    </a>
+    </Link>
   );
 };

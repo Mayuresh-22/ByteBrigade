@@ -12,7 +12,7 @@ export const AddPost = () => {
         <Avatar>
           <AvatarImage src="/placeholder.svg?height=40&width=40" alt="Your avatar" />
         </Avatar>
-        <TextArea placeholder="Ask a question to the community?" className="flex-grow border-b-2" />
+        <TextArea placeholder="Ask a question to the community?" className="flex-grow rounded-lg border border-blue-200" />
       </CardHeader>
       <CardFooter className="flex justify-end pt-0">
         <Button className="bg-blue-500 border-2 border-blue-600 text-white rounded-full px-5 hover:bg-blue-600" size="md">Post</Button>

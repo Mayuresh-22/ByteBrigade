@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from '../avatar'
 import { Button } from "../button";
 import { Card, CardContent, CardHeader, CardFooter } from '../card/card'
@@ -12,10 +12,24 @@ import {
 
 export const Post = ({ post }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <Card key={post} className="mb-6">
@@ -29,7 +43,7 @@ export const Post = ({ post }) => {
             <p className="text-xs text-gray-500">@ayushchugh • 1h</p>
           </div>
         </div>
-        <DropdownMenu>
+        <DropdownMenu ref={dropdownRef}>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-8 w-8 p-0" onClick={toggleDropdown}>
               <MoreHorizontal className="h-4 w-4" />
