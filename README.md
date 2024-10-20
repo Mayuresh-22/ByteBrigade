@@ -25,6 +25,9 @@ The PCCOE Alumni Tracking System is designed to help Pimpri Chinchwad College of
 1. **Homepage**  
 ![image](https://github.com/user-attachments/assets/84b9ee93-f99b-4a0a-a551-a49c0cdf106d)
 
+2. Cluster
+![image](https://github.com/user-attachments/assets/b6bd53d5-ce7b-4243-b970-e11bdd9a48c4)
+
 
 ### Deployed URL  
 [Live URL](https://bytebrigade.mayuresh.me)
