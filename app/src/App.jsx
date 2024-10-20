@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BookOpen, BriefcaseIcon, Home, Inbox, Users } from 'lucide-react'
 import { SearchBar } from './components/ui/search-bar'
 import {
@@ -14,8 +14,21 @@ import {
   UserProfileButton
 } from './components/ui/header'
 import { Outlet } from "react-router-dom"
+import PopUpBox from './components/ui/popup'
 
 function App() {
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [message, setMessage] = useState('');
+  const [title, setTitle] = useState('');
+
+  const handleNewMessageClick = () => {
+    // Show the pop-up for unimplemented feature
+    setShowPopUp(true);
+  };
+
+  const handleClosePopUp = () => {
+    setShowPopUp(false);
+  };
 
   return (
     <div className="open-sans-mini">
@@ -35,10 +48,14 @@ function App() {
             <SidebarMenuItem icon={<BookOpen className="h-5 w-5 mr-2" />} link="/blogs">
               Blogs
             </SidebarMenuItem>
-            <SidebarMenuItem icon={<Inbox className="h-5 w-5 mr-2" />} link="/messages">
+            <SidebarMenuItem icon={<Inbox className="h-5 w-5 mr-2" />} link="/message">
               Messages
             </SidebarMenuItem>
-            <AddNewButton className={"w-full"} />
+            <AddNewButton className={"w-full"} onClick={() => {
+              setTitle('Feature Coming Soon');
+              setMessage('Alumni will be prompted whether they want to create a post, write a blog, or add a job posting.');
+              handleNewMessageClick();
+            }} />
           </SidebarMenuList>
         </Sidebar>
         {/* Main content */}
@@ -58,6 +75,13 @@ function App() {
           </main>
         </div>
       </div >
+      {showPopUp && (
+        <PopUpBox
+          title={title}
+          message={message}
+          onClose={handleClosePopUp}
+        />
+      )}
     </div>
   )
 }

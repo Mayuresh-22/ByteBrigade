@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import PopUpBox from "../components/ui/popup";
 
-const JobCard = ({ job }) => (
-  <div className="cursor-pointer bg-white border-b px-0 py-7 flex justify-between" onClick={() => alert('We are still working on this feature')}>
+const JobCard = ({ job }) => {
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [message, setMessage] = useState('');
+  const [title, setTitle] = useState('');
+
+  const handleNewMessageClick = () => {
+    // Show the pop-up for unimplemented feature
+    setShowPopUp(true);
+  };
+
+  const handleClosePopUp = () => {
+    // refresh the page
+    window.location.reload();
+    setShowPopUp(false);
+  };
+
+  return <div className="cursor-pointer bg-white border-b px-0 py-7 flex justify-between" onClick={() => {
+    setTitle('Feature Coming Soon');
+    setMessage(`Student will be able to apply for jobs directly from the platform. More details about \'${job.title}\' will be shown on new page.`);
+    handleNewMessageClick();
+  }}>
     <div className="job-details">
       <h3 className="font-semibold text-lg">{job.title}</h3>
       <p className="text-sm text-gray-600">{job.location}</p>
@@ -13,8 +33,16 @@ const JobCard = ({ job }) => (
       </div>
     </div>
     <button className="apply-button text-blue-500 font-semibold">Apply w/ 🔗</button>
+    {showPopUp && (
+      <PopUpBox
+        id={job.title}
+        title={title}
+        message={message}
+        onClose={handleClosePopUp}
+      />
+    )}
   </div>
-);
+};
 
 const JobList = () => {
   const jobs = [

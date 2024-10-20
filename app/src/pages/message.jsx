@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from '../components/ui/button';
+import PopUpBox from '../components/ui/popup';
 
 const MessageLayout = () => {
+  const [showPopUp, setShowPopUp] = useState(false);
+
+  const handleNewMessageClick = () => {
+    // Show the pop-up for unimplemented feature
+    setShowPopUp(true);
+  };
+
+  const handleClosePopUp = () => {
+    setShowPopUp(false);
+  };
+
   return (
     <div className="message-component flex flex-col items-center justify-center h-full bg-white p-8">
       <div className="text-center max-w-md">
@@ -26,10 +39,18 @@ const MessageLayout = () => {
           Use personalized short topics to quickly start conversations on common themes.
         </p>
 
-        <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full mt-6">
+        <Button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full mt-6"
+          onClick={handleNewMessageClick}>
           Start New Discussion
-        </button>
+        </Button>
       </div>
+      {showPopUp && (
+        <PopUpBox
+          title="Feature Coming Soon"
+          message="This feature is not yet implemented. Stay tuned!"
+          onClose={handleClosePopUp}
+        />
+      )}
     </div>
   );
 };
