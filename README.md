@@ -23,16 +23,14 @@ The PCCOE Alumni Tracking System is designed to help Pimpri Chinchwad College of
 
 ### Screenshots  
 1. **Homepage**  
-   ![Homepage Screenshot](./screenshots/homepage.png)
+![image](https://github.com/user-attachments/assets/84b9ee93-f99b-4a0a-a551-a49c0cdf106d)
 
-2. **Admin Dashboard**  
-   ![Dashboard Screenshot](./screenshots/dashboard.png)
 
 ### Deployed URL  
-
+[Live URL](https://bytebrigade.mayuresh.me)
 
 ### Video URL  
-
+[Video demo](https://www.loom.com/share/c3350299bfe84db4a167a185662c2375?sid=8ea7116c-d99c-4e0d-b86c-b89166ec4ed1)
 
 ### Run Commands  
 1. Install frontend dependencies:  
