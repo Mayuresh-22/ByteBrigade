@@ -9,16 +9,16 @@ The PCCOE Alumni Tracking System is designed to help Pimpri Chinchwad College of
 - Alumni registration and profile creation (Partially built)
 - Alumni posts to share career experiences (Partially built)
 - Clusters for alumni and student discussions
-- Careers section for job postings by alumni
+- Careers section for job postings by alumni (Done)
 - Alumni blog section for sharing stories
-- Admin dashboard for alumni approval, post moderation, and data visualization
+- Admin dashboard for alumni approval, post moderation, and data visualization (Figma prototype)
 
 ### Tech Stack  
 - Frontend: React.js (Partially built)  
 - Backend: Node.js (Planned)  
 - Database: MongoDB (Planned)  
 - Authentication: JWT (Planned)  
-- Deployment: Heroku (Planned)  
+- Deployment: Cloudflare worker (Done)  
 - Styling: Tailwind CSS  
 
 ### Screenshots  
@@ -31,6 +31,11 @@ The PCCOE Alumni Tracking System is designed to help Pimpri Chinchwad College of
 
 ### Video URL  
 [Video demo](https://www.loom.com/share/c3350299bfe84db4a167a185662c2375?sid=8ea7116c-d99c-4e0d-b86c-b89166ec4ed1)
+
+
+## Development
+### Class Diagram
+<img src="https://github.com/user-attachments/assets/cfdac891-d14f-459b-87b7-180c3679b948" width=500>
 
 ### Run Commands  
 1. Install frontend dependencies:  
